@@ -19,7 +19,7 @@ app.use("/api/v1/directors", directorsRoutes);
 // API Route
 app.get('/api/v1/directors', async (req, res) => {
     try {
-      const result = await pool.query('SELECT * FROM directorlist');
+      const result = await pool.query('SELECT * FROM directors');
       res.json(result.rows);
     } catch (err) {
       console.error('Error fetching directors:', err);
