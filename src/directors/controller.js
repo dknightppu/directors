@@ -1,3 +1,4 @@
+const pool = require('../../db')
 const queries = require("./queries");
 
 // Get All Data
