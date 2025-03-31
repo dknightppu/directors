@@ -15,6 +15,16 @@ app.get("/", (req, res) => {
 });
 
 // API Route
+app.get('/api/v1/directors', async (req, res) => {
+    try {
+      const result = await pool.query('SELECT * FROM directorlist');
+      res.json(result.rows);
+    } catch (err) {
+      console.error(err);  // 👈 this helps!
+      res.status(500).json({ error: err.message }); // 👈 make sure you send the error message
+    }
+  });  
+
 app.use("/api/v1/directors", directorsRoutes);
 
 app.listen(port, () => console.log(`running on ${port}`));
