@@ -6,7 +6,7 @@ const pool = new Pool({
     //user: "postgres",
     user: "dknight",
     //host: "localhost",
-    host: process.env["dpg-cvl165odl3ps738e8uo0-a"],
+    host: process.env.DATABASE_URL["dpg-cvl165odl3ps738e8uo0-a"],
     //database: "directors",
     database: "directors-1",
     //password: "Orderofblue33!",
