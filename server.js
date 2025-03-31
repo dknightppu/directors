@@ -14,6 +14,8 @@ app.get("/", (req, res) => {
     res.send("Hello Point Park University");
 });
 
+app.use("/api/v1/directors", directorsRoutes);
+
 // API Route
 app.get('/api/v1/directors', async (req, res) => {
     try {
@@ -25,6 +27,5 @@ app.get('/api/v1/directors', async (req, res) => {
     }
   });
 
-app.use("/api/v1/directors", directorsRoutes);
 
 app.listen(port, () => console.log(`running on ${port}`));
