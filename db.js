@@ -12,6 +12,9 @@ const pool = new Pool({
     password: "Orderofblue33!",
     //password: "Hr32a2zj9jdlStg0L0cq9r1b3z4OhhJY",
     port: 5432,
+
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false }  // Required for Render's PostgreSQL
 });
 
 module.exports = pool;
