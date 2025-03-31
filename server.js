@@ -20,8 +20,8 @@ app.get('/api/v1/directors', async (req, res) => {
       const result = await pool.query('SELECT * FROM directorlist');
       res.json(result.rows);
     } catch (err) {
-      console.error(err);  // 👈 this helps!
-      res.status(500).json({ error: err.message }); // 👈 make sure you send the error message
+      console.error(err); 
+      res.status(500).json({ error: err.message });
     }
   });  
 
